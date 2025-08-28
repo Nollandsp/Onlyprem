@@ -5,6 +5,7 @@ import Image from "next/image";
 export default function Intro() {
   return (
     <main className="bg-black min-h-screen">
+      {/* Image principale */}
       <div className="w-full relative h-[420px] sm:h-[420px]">
         <Image
           src="/pool.jpg"
@@ -15,6 +16,7 @@ export default function Intro() {
         />
       </div>
 
+      {/* Titres */}
       <h1 className="text-white ml-5 text-3xl font-bold mt-10 tracking-widest">
         AGENCE ONLYPREM
       </h1>
@@ -23,12 +25,12 @@ export default function Intro() {
         Management Agency
       </h2>
 
+      {/* Description */}
       <p className="text-white ml-5 mr-5 text-lg mt-5 tracking-widest max-w-xl">
-        ONLYPREM est une agence de management et de marketing spécialisée dans
-        l'accompagnement des modèles professionnels et amateurs. Nous offrons
-        des services personnalisés pour aider nos modèles à atteindre leurs
-        objectifs.
+        {`ONLYPREM est une agence de management et de marketing spécialisée dans l'accompagnement des modèles professionnels et amateurs. Nous offrons des services personnalisés pour aider nos modèles à atteindre leurs objectifs.`}
       </p>
+
+      {/* Bouton */}
       <div className="flex items-center justify-center mt-10 mb-10">
         <div className="relative group">
           <button className="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-emerald-900 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-emerald-600">
@@ -51,14 +53,17 @@ export default function Intro() {
           </button>
         </div>
       </div>
+
+      {/* Sous-titre */}
       <h1 className="text-xl text-white ml-5 font-bold tracking-widest">
         Les raisons de rejoindre ONLYPREM
       </h1>
       <hr className="border-t-4 border-white w-1/5 ml-5 my-3" />
 
+      {/* Bloc des avantages */}
       <section className="flex items-center justify-center mt-20">
         <div className="grid grid-cols-2 w-80 h-80">
-          {/* Bloc 1 : en haut à gauche → bordure droite & bas */}
+          {/* Bloc 1 */}
           <div className="flex flex-col items-center justify-center border-r-4 border-b-4 border-gray-800 p-4">
             <Image src="/profil.png" alt="Compte" width={40} height={40} />
             <span className="text-white tracking-widest mt-2 text-center">
@@ -66,7 +71,7 @@ export default function Intro() {
             </span>
           </div>
 
-          {/* Bloc 2 : en haut à droite → bordure bas */}
+          {/* Bloc 2 */}
           <div className="flex flex-col items-center justify-center border-b-4 border-gray-800 p-4">
             <Image src="/watch.png" alt="Compte" width={40} height={40} />
             <span className="text-white tracking-widest mt-2 text-center">
@@ -74,7 +79,7 @@ export default function Intro() {
             </span>
           </div>
 
-          {/* Bloc 3 : en bas à gauche → bordure droite */}
+          {/* Bloc 3 */}
           <div className="flex flex-col items-center justify-center border-r-4 border-gray-800 p-4">
             <Image src="/finance.png" alt="Compte" width={40} height={40} />
             <span className="text-white tracking-widest mt-2 text-center">
@@ -82,7 +87,7 @@ export default function Intro() {
             </span>
           </div>
 
-          {/* Bloc 4 : en bas à droite → pas de bordure */}
+          {/* Bloc 4 */}
           <div className="flex flex-col items-center justify-center p-4">
             <Image src="/reseaux.png" alt="Compte" width={40} height={40} />
             <span className="text-white tracking-widest mt-2 text-center">
