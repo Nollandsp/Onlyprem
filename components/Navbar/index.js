@@ -49,12 +49,12 @@ export default function Navbar() {
 
         {/* Bouton Contact (à droite) */}
         <div>
-          <Link
-            href="/contact"
+          <a
+            href="mailto:onlyprem.pro17@gmail.com"
             className="hidden md:inline-block bg-black text-white px-4 py-2 rounded-xl font-medium hover:bg-gray-800 transition"
           >
             Contact
-          </Link>
+          </a>
         </div>
       </div>
 
@@ -116,13 +116,13 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link
-              href="/contact"
+            <a
+              href="mailto:onlyprem.pro17@gmail.com"
               onClick={() => setIsOpen(false)}
               className="hover:underline"
             >
               Contact
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

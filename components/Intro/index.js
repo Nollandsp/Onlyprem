@@ -6,18 +6,17 @@ import Stage from "@/components/Stage";
 export default function Intro() {
   return (
     <main className="bg-black min-h-screen py-20">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Image principale */}
-        <div className="w-full relative h-[420px] sm:h-[420px]">
-          <Image
-            src="/pool.jpg"
-            alt="Logo"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+      <div className="w-full relative h-[420px] sm:h-[420px]">
+        <Image
+          src="/pool.jpg"
+          alt="Logo"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
+      <div className="max-w-6xl mx-auto px-6">
         {/* Titres */}
         <h1 className="text-white text-3xl font-bold mt-10 tracking-widest">
           AGENCE ONLYPREM
@@ -34,17 +33,20 @@ export default function Intro() {
         {/* Bouton */}
         <div className="flex items-center justify-center mt-10 mb-10">
           <div className="relative group">
-            <button className="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-emerald-900 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-emerald-600">
+            <a
+              href="mailto:onlyprem.pro17@gmail.com"
+              className="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-emerald-900 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-emerald-600"
+            >
               <span className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500 via-cyan-500 to-sky-600 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
               <span className="relative z-10 block px-6 py-3 rounded-2xl bg-neutral-950">
                 Contatez-nous
               </span>
-            </button>
+            </a>
           </div>
         </div>
 
         {/* Sous-titre */}
-        <h1 className="text-xl text-white font-bold tracking-widest">
+        <h1 className="text-2xl text-white font-bold tracking-widest mt-20">
           Les raisons de rejoindre ONLYPREM
         </h1>
         <hr className="border-t-4 border-white w-1/5 my-3" />

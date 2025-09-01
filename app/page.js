@@ -1,12 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Intro from "@/components/Intro";
-import Gestion from "@/components/Gestion";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Intro />
+      <Footer />
     </>
   );
 }
