@@ -69,7 +69,7 @@ export default function Footer() {
           </h3>
           <div className="flex space-x-4">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/onlyprem.agency?igsh=MWlxM3JqOWg2NDdwZw=="
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-emerald-600 transition-colors"
