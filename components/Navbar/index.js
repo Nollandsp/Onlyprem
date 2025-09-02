@@ -8,9 +8,47 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative h-[80px]">
-        {/* Mobile Burger Button (à gauche) */}
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm">
+      <div className="max-w-7xl mx-auto px-6 h-[80px] flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Logo OnlyPrem"
+            width={180}
+            height={70}
+            className="object-contain h-[60px] w-auto"
+          />
+        </Link>
+
+        {/* Menu desktop */}
+        <ul className="hidden md:flex items-center gap-10 text-black font-medium tracking-wide">
+          {[
+            { name: "Accueil", href: "/" },
+            { name: "Nos modèles", href: "/models" },
+            { name: "À propos", href: "/about" },
+          ].map((link) => (
+            <li key={link.name} className="relative group">
+              <Link href={link.href} className="transition">
+                {link.name}
+              </Link>
+              {/* Trait animé au hover */}
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full" />
+            </li>
+          ))}
+        </ul>
+
+        {/* Bouton contact desktop */}
+        <div className="hidden md:block">
+          <a
+            href="mailto:onlyprem.pro17@gmail.com"
+            className="bg-black text-white px-5 py-2 rounded-xl font-medium hover:bg-gray-800 transition"
+          >
+            Contact
+          </a>
+        </div>
+
+        {/* Bouton burger mobile */}
         <button
           className="md:hidden flex flex-col gap-1 relative z-50"
           onClick={() => setIsOpen(!isOpen)}
@@ -18,68 +56,24 @@ export default function Navbar() {
           aria-expanded={isOpen}
         >
           <span
-            className={`block h-0.5 w-6 bg-black transition-transform duration-300 ease-in-out ${
+            className={`block h-0.5 w-6 bg-black transition-transform duration-300 ${
               isOpen ? "rotate-45 translate-y-1.5" : ""
             }`}
           />
           <span
-            className={`block h-0.5 w-6 bg-black transition-opacity duration-300 ease-in-out ${
+            className={`block h-0.5 w-6 bg-black transition-opacity duration-300 ${
               isOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block h-0.5 w-6 bg-black transition-transform duration-300 ease-in-out ${
+            className={`block h-0.5 w-6 bg-black transition-transform duration-300 ${
               isOpen ? "-rotate-45 -translate-y-1.5" : ""
             }`}
           />
         </button>
-
-        {/* Logo (centré absolument) */}
-        <div className="absolute left-1/2 -translate-x-1/2">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/logo.png"
-              alt="Logo OnlyPrem"
-              width={200}
-              height={90}
-              className="object-contain h-[70px] w-auto"
-            />
-          </Link>
-        </div>
-
-        {/* Bouton Contact (à droite) */}
-        <div>
-          <a
-            href="mailto:onlyprem.pro17@gmail.com"
-            className="hidden md:inline-block bg-black text-white px-4 py-2 rounded-xl font-medium hover:bg-gray-800 transition"
-          >
-            Contact
-          </a>
-        </div>
       </div>
 
-      {/* Desktop / Tablet Menu */}
-      <div className="hidden md:flex justify-center bg-white shadow-sm">
-        <ul className="flex items-center gap-8 text-black font-medium py-3">
-          <li>
-            <Link href="/" className="hover:underline">
-              Accueil
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className="hover:underline">
-              Nos modèles
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className="hover:underline">
-              À propos
-            </Link>
-          </li>
-        </ul>
-      </div>
-
-      {/* Mobile Fullscreen Menu (sous la navbar) */}
+      {/* Menu mobile plein écran */}
       <div
         className={`fixed left-0 w-full bg-white z-40 transition-all duration-300 ease-in-out ${
           isOpen
@@ -89,29 +83,17 @@ export default function Navbar() {
       >
         <ul className="flex flex-col gap-8 text-black font-bold text-xl h-full mt-10 ml-8">
           <li>
-            <Link
-              href="/"
-              onClick={() => setIsOpen(false)}
-              className="hover:underline"
-            >
+            <Link href="/" onClick={() => setIsOpen(false)}>
               Accueil
             </Link>
           </li>
           <li>
-            <Link
-              href="/about"
-              onClick={() => setIsOpen(false)}
-              className="hover:underline"
-            >
+            <Link href="/models" onClick={() => setIsOpen(false)}>
               Nos modèles
             </Link>
           </li>
           <li>
-            <Link
-              href="/about"
-              onClick={() => setIsOpen(false)}
-              className="hover:underline"
-            >
+            <Link href="/about" onClick={() => setIsOpen(false)}>
               À propos
             </Link>
           </li>
@@ -119,7 +101,6 @@ export default function Navbar() {
             <a
               href="mailto:onlyprem.pro17@gmail.com"
               onClick={() => setIsOpen(false)}
-              className="hover:underline"
             >
               Contact
             </a>
