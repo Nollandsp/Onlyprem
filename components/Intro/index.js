@@ -84,7 +84,7 @@ export default function Intro() {
         <hr className="border-t-4 border-white w-1/3 sm:w-1/5 my-3" />
 
         {/* Avantages */}
-        <section className="flex items-center justify-center sm:justify-start mt-12">
+        <section className="  relative flex justify-center lg:items-center min-h-[60vh]">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-3xl">
             <div className="flex flex-col items-center justify-center text-center p-4 border border-gray-800 rounded-lg">
               <Image src="/profil.png" alt="Compte" width={50} height={50} />

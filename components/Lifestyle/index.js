@@ -6,7 +6,7 @@ import FAQ from "../FAQ";
 export default function Lifestyle() {
   return (
     <>
-      <section className="bg-black text-white py-20 px-6">
+      <section className="bg-black text-white py-40 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
           {/* Texte */}
           <div className="space-y-6 text-center md:text-left">
@@ -34,7 +34,7 @@ export default function Lifestyle() {
             </div>
 
             {/* Image secondaire superposée */}
-            <div className="absolute bottom-0 right-0 w-2/3 h-1/2 sm:w-2/3 sm:h-2/3 translate-x-6 translate-y-6 rounded-xl shadow-2xl overflow-hidden">
+            <div className="absolute bottom-20 right-0 w-2/3 h-1/2 sm:w-2/3 sm:h-2/3 translate-x-6 translate-y-6 rounded-xl shadow-2xl overflow-hidden">
               <Image
                 src="/jet.jpg"
                 alt="Overlay"
